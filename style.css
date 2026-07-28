@@ -1,0 +1,25 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://sijaga.smkn1sukatanipwk.sch.id/img/logo4.png');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 80px 0;
+}
+
+.book-card {
+    transition: transform 0.2s;
+    height: 100%;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.leadd{
+    font-style: italic;
+}
+
+.navbar-brand span{
+    color: rgb(0, 97, 243);
+}
