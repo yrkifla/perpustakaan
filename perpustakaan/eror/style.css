@@ -1,19 +1,41 @@
-.container{
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f3f3f3;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid #cad2da;
+}
 .container .error-message {
     text-align: center;
-    margin-top: 2rem;
+
 }
 .container .error-message h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
 }
 .container .error-message p {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     margin-bottom: 1rem;
+}
+
+.container .error-message p span {
+    font-style: italic;
+    
 }
 
 .container .error-message .donate {
