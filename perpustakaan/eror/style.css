@@ -61,11 +61,13 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
+    
 }
 
 .container .error-message .donate span {
     font-size: 1rem;
     font-weight: bold;
+    margin-right: 0.5rem;
 }
 
 
@@ -85,9 +87,17 @@ body {
 }
 
 .container .error-message .balik a {
-    color: #fff;
+     color: #fff;
     text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.container .error-message .balik a span {
+    font-size: 1rem;
     font-weight: bold;
+    margin-top: 0.2rem;
 }
 
 .container .error-message .balik:hover {
