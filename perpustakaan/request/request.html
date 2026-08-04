@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usulkan Buku - PerpusSekolah</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <!-- CSS Terpisah -->
+    <link rel="stylesheet" href="request.css">
+</head>
+<body class="bg-light">
+
+    <!-- Navbar Sederhana -->
+    <nav class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-book-half me-2"></i>PerpusSekolah
+            </a>
+            <a href="index.html" class="btn btn-outline-light btn-sm">
+                <i class="bi bi-arrow-left me-1"></i> Kembali ke Beranda
+            </a>
+        </div>
+    </nav>
+
+    <!-- Form Container -->
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow border-0 p-4 rounded-4">
+                    <div class="text-center mb-4">
+                        <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center mb-3" style="width: 60px; height: 60px;">
+                            <i class="bi bi-journal-plus fs-3"></i>
+                        </div>
+                        <h3 class="fw-bold">Form Usul / Request Buku</h3>
+                        <p class="text-muted small">Punya buku atau referensi yang belum ada di perpus? Usulkan di sini!</p>
+                    </div>
+
+                    <!-- Formulir -->
+                    <form id="requestForm">
+                        <div class="mb-3">
+                            <label for="reqName" class="form-label fw-semibold">Nama Anda (Perequest)</label>
+                            <input type="text" class="form-control" id="reqName" placeholder="Contoh: Andi Pratama" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reqTitle" class="form-label fw-semibold">Judul Buku</label>
+                            <input type="text" class="form-control" id="reqTitle" placeholder="Contoh: Pemrograman Java Lanjutan" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reqAuthor" class="form-label fw-semibold">Penulis / Pengarang</label>
+                            <input type="text" class="form-control" id="reqAuthor" placeholder="Contoh: Budi Raharjo" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reqCategory" class="form-label fw-semibold">Kategori</label>
+                            <select class="form-select" id="reqCategory" required>
+                                <option value="" selected disabled>Pilih kategori...</option>
+                                <option value="Pelajaran">Pelajaran</option>
+                                <option value="Novel">Novel</option>
+                                <option value="Sains">Sains & Teknologi</option>
+                                <option value="Sejarah">Sejarah</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="reqLink" class="form-label fw-semibold">Link Referensi Buku (Opsional)</label>
+                            <input type="url" class="form-control" id="reqLink" placeholder="https://contoh.com/buku">
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 py-2 fw-bold rounded-pill shadow-sm" id="submitRequestBtn">
+                            <i class="bi bi-send me-2"></i>Kirim Usulan Buku
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SDK EmailJS untuk kirim ke email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- Script Khusus Request -->
+    <script src="request.js" type="module"></script>
+</body>
+</html>
